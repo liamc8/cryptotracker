@@ -11,7 +11,7 @@
 
 }
 
-.coin-app {
+.crypto-app {
   display:flex;
   flex-direction: column;
   align-items: center;
@@ -19,7 +19,7 @@
   color: #fff;
 }
 
-.coin-search {
+.crypto-search {
   margin-bottom: 64px;
   display: flex;
   flex-direction: column;
@@ -27,13 +27,13 @@
   align-items:center;
 }
 
-.coin-text {
+.crypto-text {
   margin-bottom: 32px;
   text-align: center;
 
 }
 
-.coin-input{
+.crypto-input{
   padding-left: 16px;
   width:300px;
   height:40px;
@@ -46,7 +46,7 @@
 
 }
 
-.coin-input::placeholder {
+.crypto-input::placeholder {
   color: #808080;
 }
 
@@ -55,6 +55,6 @@ footer{
 }
 
 
-.coin-name{
+.crypto-name{
   width:200px;
 }

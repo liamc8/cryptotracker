@@ -27,35 +27,35 @@ function App() {
   const handleChange = e => {
     setSearch(e.target.value)
   }
-  const filterCoins = coins.filter(coin =>
+  const filterCrypto = coins.filter(coin =>
     coin.name.toLowerCase().includes(search.toLowerCase())
   )
 
 
   return (
-    <div className="coin-app">
-      <div className="coin-search">
-        <h1 className='coin-text'>Cryptocurrency Tracker</h1>
+    <div className="crypto-app">
+      <div className="crypto-search">
+        <h1 className='crypto-text'>Cryptocurrency Tracker</h1>
         <form>
-          <input className="coin-input" type='text' placeholder='Search for coin...' onChange={handleChange}></input>
+          <input className="crypto-input" type='text' placeholder='Search for cryptocurrency...' onChange={handleChange}></input>
         
       </form>
-      <div className='coin-container'>
-            <div className="coin-row">
-                <div className = "coin">
+      <div className='crypto-container'>
+            <div className="crypto-row">
+                <div className = "crypto">
                 
-                <h1 className="coin-name">Name</h1>
-                <p className="coin-symbol-v"> Symbol</p>
+                <h1 className="crypto-name">Name</h1>
+                <p> Symbol</p>
                 </div>
-                <div className="coin-data">
-                    <p className = "coin-price">Price</p>
-                    <p className="coin-percent"> Percent Change</p> 
-                    <p className = "coin-marketcap"> Market Cap</p>
+                <div className="crypto-data">
+                    <p className = "crypto-price">Price</p>
+                    <p className="crypto-percent"> Percent Change</p> 
+                    <p className = "crypto-marketcap"> Market Cap</p>
 
                 </div>
             </div>
         </div>
-        <div>{filterCoins.map(coin => {
+        <div>{filterCrypto.map(coin => {
           return (
             <CryptoContainer
               key={coin.id}
