@@ -35,7 +35,7 @@ function App() {
   return (
     <div className="coin-app">
       <div className="coin-search">
-        <h1 className='coin-text'>Cryptocurrency Price Tracker</h1>
+        <h1 className='coin-text'>Cryptocurrency Tracker</h1>
         <form>
           <input className="coin-input" type='text' placeholder='Search for coin...' onChange={handleChange}></input>
         
