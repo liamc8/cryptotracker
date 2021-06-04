@@ -38,7 +38,24 @@ function App() {
         <h1 className='coin-text'>Cryptocurrency Price Tracker</h1>
         <form>
           <input className="coin-input" type='text' placeholder='Search for coin...' onChange={handleChange}></input>
+        
       </form>
+      <div className='coin-container'>
+            <div className="coin-row">
+                <div className = "coin">
+                
+                <h1 className="coin-name">Name</h1>
+                <p className="coin-symbol-v"> Symbol</p>
+                </div>
+                <div className="coin-data">
+                    <p className = "coin-price">Price</p>
+                    <p className = "coin-volume"> Volume</p>
+                    <p className="coin-percent"> Percent Change</p> 
+                    <p className = "coin-marketcap"> Market Cap</p>
+
+                </div>
+            </div>
+        </div>
         <div>{filterCoins.map(coin => {
           return (
             <Coin
@@ -54,7 +71,7 @@ function App() {
           )
         })}</div>
 
-        <footer>Made for CSCI 169 Programming Languages</footer>
+        <footer>Made for CSCI 169 Programming Languages, powered by CoinGecko API</footer>
       </div>
     </div>
   );
