@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 
 import axios from 'axios'
-import Coin from './Coin/Coin.js'
+import CryptoContainer from './CryptoContainer/CryptoContainer.js'
 import './App.css';
 
 
@@ -49,7 +49,6 @@ function App() {
                 </div>
                 <div className="coin-data">
                     <p className = "coin-price">Price</p>
-                    <p className = "coin-volume"> Volume</p>
                     <p className="coin-percent"> Percent Change</p> 
                     <p className = "coin-marketcap"> Market Cap</p>
 
@@ -58,13 +57,12 @@ function App() {
         </div>
         <div>{filterCoins.map(coin => {
           return (
-            <Coin
+            <CryptoContainer
               key={coin.id}
               image={coin.image}
               price={coin.current_price}
               symbol={coin.symbol}
               name={coin.name}
-              volume={coin.total_volume}
               priceChange={coin.price_change_percentage_24h}
               marketcap={coin.market_cap}
             />
